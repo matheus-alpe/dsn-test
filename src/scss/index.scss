@@ -1,6 +1,66 @@
+@import 'resets';
+@import 'variables';
+
 body {
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
     background: #FFF;
+}
+
+header {
+    @include flex-center(column);
+    gap: 22px;
+    background-color: $color-purple;
+    min-height: 160px;
+    height: 25vw;
+    max-height: 381px;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
+    h1 {
+        font-size: 36px;
+        font-weight: 800;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+main {
+    max-width: $max-width;
+    margin: 56px auto 48px;
+
+    .filters,
+    .newsletter {
+        background-color: $color-green;
+        padding: 25px;
+        border-radius: 8px;
+    }
+    
+    .products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 73px 0;
+    }
+    
+    .newsletter {
+        max-width: 876px;
+        margin: 0 auto 73px;
+
+        button {
+            color: $color-green;
+        }
+    }
+}
+
+footer {
+    @include flex-center(column);
+    background-color: $color-purple;
+    min-height: 126px;
+
+    p {
+        font-size: 12px;
+        font-weight: 400;
+        color: #FFF;
+    }
 }

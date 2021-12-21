@@ -6,7 +6,7 @@
     </header>
 
     <main>
-      <nav class="navigation">
+      <nav class="filters">
         <form class="search" action="#">
           <input type="text" placeholder="Buscar produto">
           <button type="submit">Buscar</button>

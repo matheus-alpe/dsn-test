@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+label, 
+button {
+    color: #FFF;
+}
+
+input,
+select,
+button {
+    border-radius: 8px;
+    height: 34px;
+}
+
+button {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+@mixin flex-center ($direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
