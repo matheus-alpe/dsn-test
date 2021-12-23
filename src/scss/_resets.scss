@@ -8,10 +8,3 @@
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
-
-@mixin flex-center ($direction: row) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: $direction;
-}
