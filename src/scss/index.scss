@@ -50,7 +50,6 @@ main {
         position: relative;
 
         input {
-            box-sizing: border-box;
             flex: 1;
             max-width: 300px;
             padding: 0 40px 0 15px;
@@ -58,7 +57,6 @@ main {
         }
 
         button {
-            box-sizing: border-box;
             width: 69px;
             position: absolute;
             right: 0;
@@ -85,6 +83,7 @@ main {
 .products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 34px 24px;
     margin: 73px 0;
 }
 
@@ -131,6 +130,20 @@ main {
         }
 
         
+    }
+}
+
+.about {
+    @include flex-center;
+    gap: 65px;
+    
+    .about__text {
+        @include flex-center(column);
+        gap: 20px;
+
+        p {
+            font-size: 14px;
+        }
     }
 }
 

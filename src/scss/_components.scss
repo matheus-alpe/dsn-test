@@ -1,5 +1,6 @@
 input {
     all: unset;
+    box-sizing: border-box;
     height: 34px;
     padding: 0 15px;
     border-radius: 8px;
@@ -15,6 +16,7 @@ input {
 
 button {
     all: unset;
+    box-sizing: border-box;
     @include flex-center;
     height: 34px;
     border-radius: 8px;
