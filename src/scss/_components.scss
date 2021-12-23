@@ -1,0 +1,38 @@
+input {
+    all: unset;
+    height: 34px;
+    padding: 0 15px;
+    border-radius: 8px;
+    background-color: #FFF;
+    border-color: #FFF;
+
+    font-size: 12px;
+
+    &::placeholder {
+        opacity: .7;
+    }
+}
+
+button {
+    all: unset;
+    @include flex-center;
+    height: 34px;
+    border-radius: 8px;
+    background-color: #FFF;
+    border-color: #FFF;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+select {
+    appearance: unset;
+    height: 34px;
+    min-width: 193px;
+    padding-left: 29px;
+    border-radius: 8px;
+    border-color: #FFF;
+    background: url("~@/assets/arrow-down.svg") no-repeat #FFF;
+    background-position: 90% 50%;
+}
+

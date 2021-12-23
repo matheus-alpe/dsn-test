@@ -29,26 +29,25 @@
         />
       </section>
 
-      <form class="newsletter" action="#">
+      <div class="newsletter">
         <h3>Quer receber dicas para organizar melhor a sua rotina? Cadastre-se!</h3>
 
-        <div>
-          <div>
+        <form action="#">
+          <div class="input-group">
             <label for="name">nome</label>
             <input type="text" id="name" placeholder="Digite seu nome" required>
           </div>
 
-          <div>
+          <div class="input-group">
             <label for="email">e-mail</label>
             <input type="email" id="email" placeholder="Digite seu e-mail" required>
           </div>
 
-          <div>
+          <div class="button-group">
             <button type="submit">Cadastrar</button>
           </div>
-        </div>
-
-      </form>
+        </form>
+      </div>
 
       <section class="about">
         <div class="about__logo">

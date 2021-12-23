@@ -1,5 +1,6 @@
 @import 'resets';
 @import 'variables';
+@import 'components';
 
 body {
     background: #FFF;
@@ -18,39 +19,19 @@ header {
     h1 {
         font-size: 36px;
         font-weight: 800;
+        color: #FFF;
     }
 
     h2 {
         font-size: 18px;
         font-weight: 400;
+        color: #FFF;
     }
 }
 
 main {
     max-width: $max-width;
     margin: 56px auto 48px;
-
-    .filters,
-    .newsletter {
-        background-color: $color-green;
-        padding: 25px;
-        border-radius: 8px;
-    }
-    
-    .products {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        margin: 73px 0;
-    }
-    
-    .newsletter {
-        max-width: 876px;
-        margin: 0 auto 73px;
-
-        button {
-            color: $color-green;
-        }
-    }
 }
 
 footer {
@@ -62,5 +43,69 @@ footer {
         font-size: 12px;
         font-weight: 400;
         color: #FFF;
+    }
+}
+
+.filters {
+    @include flex-center;
+    justify-content: space-around;
+    background-color: $color-green;
+    padding: 25px;
+    border-radius: 8px;
+
+    .search {
+        @include flex-center;
+    }
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 73px 0;
+}
+
+.newsletter {
+    max-width: 876px;
+    margin: 0 auto 73px;
+    background-color: $color-green;
+    padding: 25px;
+    border-radius: 8px;
+
+    h3 {
+        margin-bottom: 7px;
+        font-weight: 700;
+        font-size: 14px;
+        color: #FFF;
+    }
+
+    form {
+        @include flex-center;
+        justify-content: space-between;
+        gap: 13px;
+
+
+        .input-group {
+            @include flex-center(column);
+            align-items: stretch;
+            flex: 1;
+            gap: 2px;
+
+            label {
+                font-size: 12px;
+                font-weight: 400;
+                color: #FFF;
+            }
+        }
+
+        .button-group {
+            margin-top: auto;
+
+            button {
+                width: 100px;
+                color: $color-green;
+            }
+        }
+
+        
     }
 }
