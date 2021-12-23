@@ -12,7 +12,7 @@
           <button type="submit">Buscar</button>
         </form>
 
-        <div>
+        <div class="order-by">
           <label for="order-by">Filtrar por:</label>
           <select name="order-by" id="order-by">
             <option value="Maior valor">Maior Valor</option>

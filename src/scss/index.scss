@@ -34,27 +34,50 @@ main {
     margin: 56px auto 48px;
 }
 
-footer {
-    @include flex-center(column);
-    background-color: $color-purple;
-    min-height: 126px;
-
-    p {
-        font-size: 12px;
-        font-weight: 400;
-        color: #FFF;
-    }
-}
-
 .filters {
     @include flex-center;
     justify-content: space-around;
+    flex-wrap: wrap;
     background-color: $color-green;
     padding: 25px;
     border-radius: 8px;
 
     .search {
+        flex: 1;
+        max-width: 335px;
         @include flex-center;
+        position: relative;
+
+        input {
+            box-sizing: border-box;
+            flex: 1;
+            max-width: 300px;
+            padding: 0 40px 0 15px;
+            margin-right: auto;
+        }
+
+        button {
+            box-sizing: border-box;
+            width: 69px;
+            position: absolute;
+            right: 0;
+            background: $color-green;
+            border: 2px solid #FFF;
+            color: #FFF;
+        }
+    }
+
+    .order-by {
+        flex: 1;
+        max-width: 335px;
+        @include flex-center;
+        gap: 29px;
+
+        label {
+            font-weight: 700;
+            font-size: 14px;
+            color: #FFF;
+        }
     }
 }
 
@@ -107,5 +130,17 @@ footer {
         }
 
         
+    }
+}
+
+footer {
+    @include flex-center(column);
+    background-color: $color-purple;
+    min-height: 126px;
+
+    p {
+        font-size: 12px;
+        font-weight: 400;
+        color: #FFF;
     }
 }
