@@ -1,8 +1,11 @@
 <template>
   <div class="product">
-    
     <div class="thumbnail">
-      <img :src="product.image_url" :alt="product.name" referrerpolicy="no-referrer"/>
+      <img
+        :src="product.image_url"
+        :alt="product.name"
+        referrerpolicy="no-referrer"
+      />
     </div>
 
     <div class="content">
@@ -20,22 +23,22 @@
 
 <script>
 export default {
-  name: 'ProductCard',
+  name: "Card",
   props: {
-    product: Object
+    product: Object,
   },
   computed: {
-    installment () {
-      return this.product.price / 10
-    }
+    installment() {
+      return this.product.price / 10;
+    },
   },
   methods: {
-    formatPrice (value) {
-      return value.toLocaleString('pt-BR', {
-        style: 'currency',
-        currency: 'BRL',
-      })
+    formatPrice(value) {
+      return value.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
     },
-  }
-}
+  },
+};
 </script>
