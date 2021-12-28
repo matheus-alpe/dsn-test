@@ -8,6 +8,7 @@
     <div class="order-by">
       <label for="order-by">Filtrar por:</label>
       <select name="order-by" id="order-by">
+        <option value="Mais populares">Mais populares</option>
         <option value="Maior valor">Maior Valor</option>
         <option value="Menor valor">Menor Valor</option>
       </select>

@@ -1,23 +1,27 @@
 <template>
-  <div class="product">
-    <div class="thumbnail">
-      <img
-        :src="product.image_url"
-        :alt="product.name"
-        referrerpolicy="no-referrer"
-      />
-    </div>
-
-    <div class="content">
-      <p class="name">{{ product.name }}</p>
-
-      <div class="prices">
-        <span class="oldprice">{{ formatPrice(product.oldPrice) }}</span>
-        <span class="price">{{ formatPrice(product.price) }}</span>
+  <div class="product" :class="{ 'unavailable': !product.available }" >
+    <div class="info">
+      <div class="thumbnail">
+        <img
+          :src="product.image_url"
+          :alt="product.name"
+          referrerpolicy="no-referrer"
+        />
       </div>
 
-      <p class="installment">10x de {{ formatPrice(installment) }} sem juros</p>
+      <div class="content">
+        <p class="name">{{ product.name }}</p>
+
+        <div class="prices">
+          <span class="oldprice">{{ formatPrice(product.oldPrice) }}</span>
+          <span class="price">{{ formatPrice(product.price) }}</span>
+        </div>
+
+        <p class="installment">10x de {{ formatPrice(installment) }} sem juros</p>
+        <a :href="product.image_url" target="_blank" class="view">Ver produto</a>
+      </div>
     </div>
+    <a :href="product.image_url" target="_blank" class="view">Ver produto</a>
   </div>
 </template>
 

@@ -100,7 +100,7 @@ main {
             appearance: unset;
             height: 34px;
             max-width: 193px;
-            min-width: 147px;
+            min-width: 170px;
             width: 100%;
             padding-left: 29px;
             border-radius: 8px;
@@ -114,7 +114,7 @@ main {
 
 .products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 34px 24px;
     margin: 73px 0;
 }
@@ -192,7 +192,7 @@ footer {
     }
 }
 
-@media (max-width: 875px) {
+@media (max-width: $phone) {
     header {
         .hero {
             h1 {
@@ -229,6 +229,7 @@ footer {
 
         .about__text {
             text-align: center;
+            padding: 0 17px;
         }
     }
 }
