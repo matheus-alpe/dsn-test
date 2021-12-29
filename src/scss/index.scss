@@ -107,14 +107,15 @@ main {
             border-color: #FFF;
             background: url("~@/assets/arrow-down.svg") no-repeat #FFF;
             background-position: 90% 50%;
-            font-size: 14px;    
+            font-size: 14px;
+            cursor: pointer;
         }
     }
 }
 
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 34px 24px;
     margin: 73px 0;
 }
@@ -210,6 +211,10 @@ footer {
         }
     }
 
+    main {
+        margin: 45px auto 40px;
+    }
+
     .filters {
         padding: 30px 17px;
 
@@ -217,6 +222,12 @@ footer {
             justify-content: space-between;
             gap: 5px;
         }
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px 33px;
+        margin: 40px 0;
     }
 
     .newsletter {

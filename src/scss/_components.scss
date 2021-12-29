@@ -6,8 +6,8 @@ input {
     border-radius: 8px;
     background-color: #FFF;
     border-color: #FFF;
-
     font-size: 12px;
+    cursor: text;
 
     &::placeholder {
         opacity: .7;
@@ -24,4 +24,5 @@ button {
     border-color: #FFF;
     font-size: 14px;
     font-weight: 700;
+    cursor: pointer;
 }

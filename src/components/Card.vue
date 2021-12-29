@@ -21,7 +21,7 @@
         <a :href="product.image_url" target="_blank" class="view">Ver produto</a>
       </div>
     </div>
-    <a :href="product.image_url" target="_blank" class="view">Ver produto</a>
+    <a :href="product.image_url" target="_blank" class="view overlay">Ver produto</a>
   </div>
 </template>
 
