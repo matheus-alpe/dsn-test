@@ -12,7 +12,12 @@
           {{ discount }}% OFF
         </span>
 
-        <span class="flag free-shipping">Frete Grátis</span>
+        <span
+          v-if="product.details.freeShipping"
+          class="flag free-shipping"
+        >
+          Frete Grátis
+        </span>
       </div>
       <div class="thumbnail">
         <img
@@ -58,9 +63,11 @@
 <script>
 export default {
   name: "Card",
+
   props: {
     product: Object,
   },
+
   computed: {
     installment() {
       return this.product.price / 10;
@@ -72,6 +79,7 @@ export default {
       return Math.trunc((1 - discount) * 100);
     }
   },
+
   methods: {
     formatPrice(value) {
       return value.toLocaleString("pt-BR", {
