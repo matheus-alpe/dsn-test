@@ -31,7 +31,10 @@
         <p class="name">{{ product.name }}</p>
 
         <template v-if="product.available">
-          <div class="prices">
+          <div
+            class="prices"
+            :class="{ 'minimal': !discount }"
+          >
             <div class="oldPrice-container">
               <span
                 class="oldprice" 
