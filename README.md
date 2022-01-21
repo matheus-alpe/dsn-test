@@ -1,5 +1,8 @@
 # webdesign-test
 
+## Live Preview
+https://quizzical-franklin-750871.netlify.app/
+
 ## Project setup
 ```
 npm install
